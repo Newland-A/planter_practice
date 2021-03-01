@@ -4,10 +4,18 @@
   <strong>Name:</strong>
   <%= @plant.name %>
 </p>
+<p>
+  <strong>Height:</strong>
+  <%= @plant.height %>
+</p>
 
 <p>
+  <strong>Weight:</strong>
+  <%= @plant.weight %>
+</p>
+<p>
   <strong>Person:</strong>
-  <%= @plant.person %>
+  <%= link_to @plant.person.name, person_path(@plant.person) %>
 </p>
 
 <%= link_to 'Edit', edit_plant_path(@plant) %> |
